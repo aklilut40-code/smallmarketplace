@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketplace</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="navbar-inner">
+    <div class="brand">small<em>market</em></div>
+    <button class="btn-solid" id="openAddBtn">+ Sell an item</button>
+  </div>
+</header>
+
+<main class="section">
+  <input type="text" class="search-bar" id="searchInput" placeholder="Search products...">
+  <div class="category-filter" id="categoryFilter"></div>
+  <div class="product-grid" id="productGrid"></div>
+  <p class="empty-state" id="emptyState" style="display:none;">No products match your search.</p>
+</main>
+
+<footer class="app-footer">smallmarket — listings saved on this device</footer>
+
+<!-- Add product modal -->
+<div class="modal-backdrop" id="addModal">
+  <div class="modal">
+    <div class="modal-head">
+      <h2>List an item</h2>
+      <button class="modal-close" id="closeAddBtn">&times;</button>
+    </div>
+    <form id="addForm" class="form">
+      <label>Item name</label>
+      <input type="text" name="name" required>
+
+      <label>Description</label>
+      <textarea name="description" rows="3" required></textarea>
+
+      <div class="form-row">
+        <div>
+          <label>Price (USD)</label>
+          <input type="number" name="price" min="0" required>
+        </div>
+        <div>
+          <label>Category</label>
+          <select name="category" id="categorySelect"></select>
+        </div>
+      </div>
+
+      <label>Location</label>
+      <input type="text" name="location" required>
+
+      <label>Contact info</label>
+      <input type="text" name="contact" placeholder="Phone or email" required>
+
+      <label>Photo (optional)</label>
+      <input type="file" name="image" accept="image/*" id="imageInput">
+
+      <button type="submit" class="btn-solid">List item</button>
+    </form>
+  </div>
+</div>
+
+<!-- Product details modal -->
+<div class="modal-backdrop" id="detailsModal">
+  <div class="modal" id="detailsContent"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
