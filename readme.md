@@ -2,7 +2,7 @@
 
 A simple browser-based marketplace — browse listings, search, filter by category, and list your own items for sale. Built with plain HTML, CSS, and JavaScript — no backend or database required.
 
-🔗 **Live site:** https://aklilut40-code.github.io/smallmarket
+🔗 **Live site:** https://aklilut40-code.github.io/smallmarketplace
 
 ## About
 
